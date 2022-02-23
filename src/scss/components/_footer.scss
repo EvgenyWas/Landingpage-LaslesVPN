@@ -1,0 +1,126 @@
+.footer {
+    &__container {
+        display: flex;
+        justify-content: space-between;
+
+        @include sm {
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    & .logotype {
+        margin-bottom: 2rem;
+    }
+
+    &__description {
+        width: 34rem;
+        margin-bottom: 3rem;
+        font-weight: weight(regular);
+        font-size: $sm-text;
+        line-height: 3rem;
+        color: $text-color;
+    }
+
+    &__name {
+        font-weight: weight(medium);
+        font-size: $sm-text;
+        line-height: 3rem;
+        color: $text-color;
+    }
+
+    &__links {
+        display: flex;
+        justify-content: start;
+    }
+
+    &__copyright {
+        font-weight: weight(regular);
+        font-size: $sm-text;
+        line-height: 3rem;
+        color: #AFB5C0;
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+        margin-bottom: 10rem;
+
+        @include sm {
+            display: none;
+        }
+    }
+
+    &__ref {
+        position: relative;
+        font-weight: weight(regular);
+        font-size: $sm-text;
+        line-height: 3rem;
+        color: $text-color;
+        transition: width 0.5s;
+
+        &--title {
+            position: relative;
+            font-weight: weight(medium);
+            font-size: $md-text;
+            line-height: 3rem;
+            color: $title-color;
+            transition: width 0.5s;
+
+            &:after {
+                content: "";
+                position: absolute;
+                right: 0;
+                bottom: -3px;
+                display: block;
+                width: 0;
+                height: 1px;
+                background-color: $text-color;
+                transition: width 0.5s;
+            }
+            
+            &:hover:after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -3px;
+                display: block;
+                width: 100%;
+                height: 1px;
+                background-color: $text-color;
+            }
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: -3px;
+            display: block;
+            width: 0;
+            height: 1px;
+            background-color: $text-color;
+            transition: width 0.5s;
+        }
+        
+        &:hover:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: $link-color;
+        }
+    }
+
+    &__item {
+        margin-bottom: 1rem;
+
+        &--header {
+            margin-bottom: 2rem;
+        }
+    }
+}

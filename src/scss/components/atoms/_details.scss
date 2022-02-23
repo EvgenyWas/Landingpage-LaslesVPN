@@ -1,0 +1,49 @@
+.details {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    height: 20rem;
+
+    @include sm {
+        flex-grow: 0;
+    }
+
+    &:not(:last-child):after {
+        content: "";
+        position: absolute;
+        top: 19%;
+        right: 0;
+        bottom: 19%;
+        border-right: 2px solid #EEEFF2;
+
+        @include sm {
+            bottom: 0;
+            right: 19%;
+            left: 19%;
+            border-bottom: 2px solid #EEEFF2;
+            border-right: none;
+        }
+    }
+
+    &__icon {
+        width: 55px;
+        margin-right: 3.7rem;
+    }
+
+    &__title {
+        margin-bottom: 5px;
+        font-weight: weight(bold);
+        font-size: $xl-text;
+        line-height: 3rem;
+        color: $title-color;
+    }
+
+    &__subtitle {
+        font-weight: weight(regular);
+        font-size: $lg-text;
+        line-height: 3rem;
+        color: $text-color;
+    }
+}

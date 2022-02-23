@@ -1,0 +1,55 @@
+.subscribe {
+    &__container {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5.8rem 7rem;
+        margin: 0 auto;
+        transform: translateY(-50%);
+        background: $primary-color;
+        border-radius: $rounded;
+        box-shadow: 2.7px 2.7px 2.9px rgba(0, 0, 0, 0.052),
+        5.9px 5.9px 9.3px rgba(0, 0, 0, 0.058),
+        10.1px 10.1px 20.4px rgba(0, 0, 0, 0.062),
+        16.2px 16.2px 37.6px rgba(0, 0, 0, 0.064),
+        27.5px 27.5px 61.5px rgba(0, 0, 0, 0.067),
+        100px 100px 80px rgba(0, 0, 0, 0.07);
+
+        @include md {
+            padding: 3.8rem 4rem;
+        }
+
+        @include sm {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__text {
+        width: 36%;
+
+        @include lg {
+            width: 50%;
+        }
+
+        @include sm {
+            width: 70%;
+            margin-bottom: 5rem;
+            text-align: center;
+        }
+    }
+
+    &__title {
+        margin-bottom: 0.6em;
+        font-weight: weight(medium);
+        font-size: $xxl-text;
+        color: $title-color;
+    }
+
+    &__subtitle {
+        font-weight: weight(medium);
+        font-size: $sm-text;
+        color: $text-color;
+    }
+}

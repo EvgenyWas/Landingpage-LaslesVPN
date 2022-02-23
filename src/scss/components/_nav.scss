@@ -1,0 +1,97 @@
+.nav {
+    padding: 5em 0;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__link {
+        position: relative;
+        margin: 0 1.3em;
+        font-weight: weight(regular);
+        font-size: $sm-text;
+        line-height: 1.9rem;
+        color: $text-color;
+        transition: width 0.5s;
+
+        &:after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: -3px;
+            display: block;
+            width: 0;
+            height: 1px;
+            background-color: $text-color;
+            transition: width 0.5s;
+        }
+        
+        &:hover:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: $link-color;
+        }
+
+        @include lg {
+            margin: 0 0.6em;
+        }
+
+        @include md {
+            display: none;
+        }
+    }
+
+    &__login {
+        display: flex;
+        align-items: center;
+
+        @include md {
+            display: none;
+        }
+    }
+
+    &__sign-in {
+        margin-right: 3rem;
+        font-weight: weight(medium);
+        font-size: $sm-text;
+        line-height: 1.9rem;
+        color: $title-color;
+        transition: 0.2s ease-in;
+
+        &:hover {
+            color: $link-color;
+        }
+    }
+
+    &__sign-up {
+        padding: 13px 45px;
+        font-weight: weight(medium);
+        font-size: $sm-text;
+        line-height: 1.9rem;
+        color: $link-color;
+        border: 1px solid $link-color;
+        border-radius: 50px;
+        transition: 0.2s ease-in-out;
+
+        &:hover {
+            color: $primary-color;
+            background: $link-color;
+        }
+    }
+
+    &__list {
+        display: none;
+
+        @include md {
+            display: block;
+            width: 40px;
+        }
+    }
+}

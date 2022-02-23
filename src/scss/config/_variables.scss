@@ -1,0 +1,37 @@
+$primary-color: #FFFFFF;
+$secondary-color: #F7F7F7;
+$third-color: #F8F8F8;
+$link-color: #F53838;
+$rounded: 10px;
+
+// Typography
+$title-color: #0B132A;
+$text-color: #4F5665;
+$font: 'Rubik';
+$font-weights: (
+    'regular': 400,
+    'medium': 500,
+    'bold': 700
+);
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name);
+}
+$xxl-text: 3.5rem;
+$xl-text: 2.5rem;
+$lg-text: 2rem;
+$md-text: 1.8rem;
+$sm-text: 1.6rem;
+$xs-text: 1.4rem;
+
+
+// Small tablets and large smartphones (landscape view)
+$screen-sm-max: 576px;
+
+// Small tablets (portrait view)
+$screen-md-max: 768px;
+
+// Tablets and small desktops
+$screen-lg-max: 992px;
+
+// Large tablets and desktops
+$screen-xl-max: 1200px;

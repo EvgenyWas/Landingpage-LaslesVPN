@@ -1,0 +1,20 @@
+.link {
+    padding: 1em 4.7em;
+    font-weight: weight(bold);
+    font-size: $sm-text;
+    line-height: 2.5rem;
+    color: $primary-color;
+    border-radius: $rounded;
+    border: 2.5px solid $link-color;
+    background: $link-color;
+    transition: 0.3s ease-in-out;
+
+    &:hover {
+        color: $link-color;
+        background: $primary-color;
+    }
+
+    @include lg {
+        padding: 0.8em 3.7em;
+    }
+}

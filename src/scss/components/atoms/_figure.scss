@@ -1,0 +1,69 @@
+.figure {
+    &__container {
+        width: 40rem;
+        height: 23rem;
+        padding: 3rem;
+        margin-right: 5rem;
+        border: 2px solid #DDDDDD;
+        border-radius: $rounded;
+
+        &--active {
+            border: 2px solid $link-color;
+        }
+
+        @include md {
+            width: 35rem;
+            height: 20rem;
+            padding: 1rem;
+            margin-right: 3rem;
+        }
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+    }
+
+    &__picture {
+        width: 5rem;
+        margin-right: 2rem;
+    }
+
+    &__figcaption {
+        flex-grow: 1;
+    }
+
+    &__name {
+        margin-bottom: 5px;
+        font-weight: weight(medium);
+        font-size: $md-text;
+        color: $title-color;
+    }
+
+    &__place {
+        font-weight: weight(regular);
+        font-size: $xs-text;
+        color: $text-color;
+        
+    }
+
+    &__number {
+        display: flex;
+        font-weight: weight(regular);
+        font-size: $sm-text;
+        color: $title-color;
+    }
+
+    &__star {
+        width: 16px;
+        margin-left: 10px;
+    }
+
+    &__body {
+        flex-grow: 1;
+        font-weight: weight(regular);
+        font-size: $sm-text;
+        line-height: 3rem;
+        color: $title-color;
+    }
+}

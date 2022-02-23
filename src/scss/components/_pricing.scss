@@ -1,0 +1,104 @@
+.pricing {
+    & .heading {
+        padding-top: 8rem;
+    }
+
+    &__container {
+
+        margin-bottom: 15rem;
+    }
+
+    &__cards {
+        display: flex;
+        gap: 50px;
+
+        @include sm {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 0 1 30%;
+        height: 730px;
+        padding: 8rem 0 5rem 0;
+        border-radius: $rounded;
+        border: 2px solid #DDDDDD;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+            position: relative;
+            transform: scale(1.02);
+            border: 2px solid $link-color;
+        }
+
+        @include sm {
+            flex-basis: 70%;
+            height: 90vh;
+            padding: 5rem 0 3rem 0;
+        }
+    }
+
+    &__icon {
+        width: 145px;
+        margin-bottom: 3rem;
+    }
+
+    &__title {
+        margin-bottom: 1.7em;
+        font-weight: weight(medium);
+        font-size: $md-text;
+        line-height: 3rem;
+        text-align: center;
+        color: $title-color;
+    }
+
+    &__list {
+        flex-grow: 1;
+    }
+
+    &__item {
+        margin-bottom: 1rem;
+        font-weight: weight(regular);
+        font-size: $xs-text;
+        line-height: 3rem;
+        color: $text-color;
+        list-style-image: url('../assets/pricing/check.svg');
+    }
+
+    &__price {
+        margin-bottom: 0.8em;
+        font-weight: weight(medium);
+        font-size: $xl-text;
+        line-height: 3rem;
+        text-align: center;
+        color: $title-color;
+    }
+
+    &__pricing-time {
+        font-weight: weight(regular);
+        font-size: $xl-text;
+        line-height: 3rem;
+        color: $text-color;
+    }
+}
+
+.select-link {
+    padding: 13px 63px;
+    font-weight: weight(bold);
+    font-size: $sm-text;
+    line-height: 1.9rem;
+    color: $link-color;
+    border: 2px solid $link-color;
+    border-radius: 50px;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+        color: $primary-color;
+        background: $link-color;
+        box-shadow: 0 17px 60px rgba(245, 56, 56, 0.35);
+    }
+}

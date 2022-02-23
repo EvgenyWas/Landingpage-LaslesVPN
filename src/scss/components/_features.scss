@@ -1,0 +1,87 @@
+.features {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: end;
+    padding-top: 10.5rem;
+    background: url('../assets/features/background.png') no-repeat;
+    background-position: left bottom 12.6rem;
+    background-size: auto;
+
+    @include lg {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: none;
+
+        &::after {
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            content: "";
+            background: url('../assets/features/background.png') no-repeat center;
+            background-position: bottom 12.6rem;
+            opacity: 0.3;
+           
+        } 
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 38%;
+        margin-bottom: 12.6rem;
+
+        @include lg {
+            align-items: center;
+            max-width: 60%;
+        }
+    }
+
+    &__title {
+        margin-bottom: 0.6em;
+        font-weight: weight(medium);
+        font-size: $xxl-text;
+        line-height: 5rem;
+        text-align: start;
+        color: $title-color;
+
+        @include lg {
+            text-align: center;
+        }
+    }
+
+    &__subtitle {
+        margin-bottom: 1.3em;
+        font-weight: weight(regular);
+        font-size: $sm-text;
+        line-height: 3rem;
+        text-align: start;
+        color: $text-color;
+
+        @include lg {
+            text-align: center;
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        font-weight: weight(regular);
+        font-size: $xs-text;
+        line-height: 3rem;
+        text-align: start;
+        color: $text-color;
+        list-style: none;
+    }
+
+    &__icon {
+        width: 24px;
+        margin-right: 10px;
+    }
+   
+}
